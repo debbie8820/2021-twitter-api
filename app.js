@@ -14,9 +14,6 @@ if (process.env.NODE_ENV !== 'production') {
 const port = process.env.PORT || 3000
 const helpers = require('./_helpers')
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
-app.set('view engine', "handlebars")
-
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 app.use(cors())
